@@ -1,4 +1,5 @@
-fetch("./data.json").then((response) => {
+fetch("./data.json")
+.then((response) => {
     return response.json();
   }).then((data) => {
     const session = document.querySelector(".session-one");
@@ -51,10 +52,22 @@ fetch("./data.json").then((response) => {
         // Chuyển hướng sang trang chi tiết sản phẩm
         window.location.href = "./productdetail.html?id=" + item.id;
       });
+      
+    const searchButton = document.querySelector("#button");
+
+    searchButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      const searchKeyword = document.querySelector("input[name='query']").value.trim().toLowerCase();
+
+  
+  window.location.href = "./search.html?keyword=" + encodeURIComponent(searchKeyword);
+});
+
+      
     });
   }).catch((error) => {
     console.log(error);
- // Thêm CSS để đảm bảo 4 sản phẩm trên cùng một hàng
+ 
  
 });
 
@@ -104,16 +117,29 @@ fetch("./data.json")
   
       content2.appendChild(p);
       content2.appendChild(brand2);
-      content2.appendChild(price2);p
+      content2.appendChild(price2);
 
       box2.addEventListener("click", () => {
         // Chuyển hướng sang trang chi tiết sản phẩm
         window.location.href = "./productdetail.html?id=" + item.id;
       });
-    });
-  })
-  .catch((error) => {
-    console.log(error);
+        
+      const searchButton = document.querySelector("#button");
+
+      searchButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const searchKeyword = document.querySelector("input[name='query']").value.trim().toLowerCase();
+  
+    
+    window.location.href = "./search.html?keyword=" + encodeURIComponent(searchKeyword);
+  });
+  
+        
+      });
+    }).catch((error) => {
+      console.log(error);
+   
+   
   });
  
 httpRequest.open("GET", "data.json", true);
