@@ -55,14 +55,12 @@
     <button id="checkout-button">Mua hàng</button>
 
     <script>
-        // Get the cart from sessionStorage
         // Get the cart from localStorage
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
         // Get the table body element to populate the cart items
         const cartItemsBody = document.getElementById("cart-items");
 
-        // Function to remove a product from the cart
         // Function to remove a product from the cart
         function removeFromCart(index) {
             cart.splice(index, 1);
@@ -73,7 +71,8 @@
         // Function to update the quantity of a product in the cart
         function updateQuantity(index, quantity) {
             cart[index].quantity = quantity;
-            sessionStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCartItems();
         }
 
         // Function to render the cart items
@@ -102,15 +101,37 @@
                 row.appendChild(productPriceCell);
 
                 const quantityCell = document.createElement("td");
-                const quantityInput = document.createElement("input");
-                quantityInput.type = "number";
-                quantityInput.min = "1";
-                quantityInput.value = product.quantity;
-                quantityInput.addEventListener("change", (event) => {
-                    const newQuantity = parseInt(event.target.value);
+                const quantityWrapper = document.createElement("div");
+                quantityWrapper.classList.add("quantity-wrapper");
+
+                const decreaseButton = document.createElement("button");
+                decreaseButton.textContent = "-";
+                decreaseButton.addEventListener("click", () => {
+                    const newQuantity = Math.max(product.quantity - 1, 1);
                     updateQuantity(index, newQuantity);
                 });
-                quantityCell.appendChild(quantityInput);
+                quantityWrapper.appendChild(decreaseButton);
+
+                const quantityInput = document.createElement("input");
+                quantityInput.type = "text";
+                quantityInput.value = product.quantity;
+                quantityInput.addEventListener("input", (event) => {
+                    const newQuantity = parseInt(event.target.value);
+                    if (!isNaN(newQuantity) && newQuantity >= 1) {
+                        updateQuantity(index, newQuantity);
+                    }
+                });
+                quantityWrapper.appendChild(quantityInput);
+
+                const increaseButton = document.createElement("button");
+                increaseButton.textContent = "+";
+                increaseButton.addEventListener("click", () => {
+                    const newQuantity = product.quantity + 1;
+                    updateQuantity(index, newQuantity);
+                });
+                quantityWrapper.appendChild(increaseButton);
+
+                quantityCell.appendChild(quantityWrapper);
                 row.appendChild(quantityCell);
 
                 const removeButtonCell = document.createElement("td");
@@ -124,20 +145,20 @@
 
                 cartItemsBody.appendChild(row);
             });
-            // Update the cart badge with the total number of products
-            cartBadge.textContent = cart.length.toString();
 
+            // Update the cart badge with the total number of products
+            const cartBadge = document.getElementById("badge");
+            cartBadge.textContent = cart.length.toString();
         }
-        
 
         // Function to handle the checkout button click
         function handleCheckout() {
             // Perform the checkout logic here
-            // You can redirect to a payment page or perform any other action
+            // You can redirect to a payment page orperform any other action
 
             // Clear the cart after checkout
             cart = [];
-            sessionStorage.removeItem("cart");
+            localStorage.removeItem("cart");
             renderCartItems();
         }
 
