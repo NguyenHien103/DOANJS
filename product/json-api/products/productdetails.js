@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
 // Make a request to get the product details
-fetch("./data.json")
+fetch("/product/json-api/data.json")
 .then((response) => {
 return response.json();
 })

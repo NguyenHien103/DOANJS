@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchKeyword = urlParams.get("keyword");
 
   if (searchKeyword) {
-    fetch("./data.json")
+    fetch("/product/json-api/data.json")
       .then((response) => response.json())
       .then((data) => {
         const boysearchResults = data.boy.filter((item) => {
@@ -61,4 +61,4 @@ function createResultItem(item) {
   // Hiển thị thêm thông tin sản phẩm tại đây
 
   return resultItem;
-}
+} 
