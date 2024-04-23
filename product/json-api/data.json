@@ -224,5 +224,17 @@
       "amount": "28",
       "id": "29"
     }
+  ],
+  "user": [
+    {
+      "username": "long",
+      "password": "123456",
+      "sdt": "0974172781"
+    },
+    {
+      "username": "toan",
+      "password": "1234569",
+      "sdt": "0771269821"
+    }
   ]
 }
