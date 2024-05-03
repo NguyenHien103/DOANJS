@@ -197,14 +197,32 @@
   ],
   "user": [
     {
+      "id": "1",
       "username": "long",
       "password": "123456",
-      "sdt": "0974172781"
+      "sdt": "0974172781",
+      "role": "1"
     },
     {
+      "id": "2",
       "username": "toan",
       "password": "1234569",
-      "sdt": "0771269821"
+      "sdt": "0771269821",
+      "role": "1"
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "password": "1",
+      "sdt": "1",
+      "role": "0"
+    },
+    {
+      "username": "tung",
+      "password": "r123",
+      "sdt": "1231231231",
+      "role": "1",
+      "id": "4"
     }
   ]
 }

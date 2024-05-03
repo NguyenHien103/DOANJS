@@ -121,23 +121,33 @@ fetch("./data.json")
   });
 
 
-
-var loginBtn = document.getElementById("login-btn");
-var logoutBtn = document.getElementById("logout-btn");
-loginBtn.addEventListener("click", function () {
-  var isLoggedIn = localStorage.getItem("isLoggedIn");
-  if (isLoggedIn === "true") {
-    // Người dùng đã đăng nhập
-    loginBtn.style.display = "none";
-    logoutBtn.style.display = "block";
+  const loginBtn = document.getElementById("login-btn");
+  const logoutBtn = document.getElementById("logout-btn");
+  const greetingMsg = document.getElementById("greeting-msg");
+  
+  loginBtn.addEventListener("click", function () {
+    window.location.href = "./login.html";
+  });
+  
+  logoutBtn.addEventListener("click", function () {
     localStorage.setItem("isLoggedIn", "false");
     location.reload();
-    // Chuyển hướng đến trang đăng nhập
-
-  } else {
-    localStorage.setItem("isLoggedIn", "false");
-    window.location.href = "./signin.html";
-  }
-});
-httpRequest.open("GET", "data.json", true);
-httpRequest.send();
+  });
+  
+  // Cập nhật trạng thái của nút đăng nhập/xuất khi tải trang
+  window.addEventListener("load", function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const username = sessionStorage.getItem("user");
+  
+    if (isLoggedIn && username) {
+     greetingMsg.innerText = isLoggedIn && username ? `Xin chào, ${username}!` : "";
+      logoutBtn.style.display = "block";
+      loginBtn.style.display = "none";
+    } else {
+      logoutBtn.style.display = "none";
+      loginBtn.style.display = "block";
+      sessionStorage.removeItem("user");
+    }
+  });
+  
+  
