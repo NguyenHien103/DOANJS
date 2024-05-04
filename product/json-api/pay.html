@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+
+<body>
+  <style>
+    td img {
+      width: 200px;
+
+      object-fit: cover;
+    }
+  </style>
+  <header class="header">
+
+    <div class="header-main">
+      <div class="container">
+        <div class="inner-wrap">
+          <div class="inner-logo">
+            <a href="product.html">
+              <img src="uploads/Logo.png" ; width="80px" alt="">
+            </a>
+            <!-- <span>FASHION KIDS</span> -->
+
+          </div>
+          <div class="inner-menu">
+            <ul>
+              <li>
+                <a class="home" href="product.html">Home</a>
+              </li>
+              <li>
+                <a href="#">Shop</a>
+              </li>
+              <li>
+                <a href="#">Product</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="thongtinthanhtoan">
+    <h2>Thông Tin Vận Chuyển Và Giỏ Hàng</h2>
+    <!-- <h2 id="lastElement"></h2> -->
+    <ul>
+
+      <li>Họ Tên:
+
+      </li>
+      <li>Phone: </li>
+      <li>Địa chỉ: </li>
+      <li>Ghi chú: </li>
+    </ul>
+  </div>
+  <table style="width:100%; text-align: center;border-collapse: collapse;" border="1" id="oder">
+    <tr>
+      <thead>
+        <th>Sản Phẩm</th>
+        <th>Tên</th>
+        <th>Thương hiệu</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+    </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">Tổng tiền:</td>
+        <!-- <td id="total-price"></td> -->
+      </tr>
+    </tfoot>
+  </table>
+  <div class="hinhthuchanhtoan">
+    <h2>Phương thức thanh toán</h2>
+    <div class="form-check">
+      <input type="radio" name="payment" id="exampleRadios1" value="tienmat" checked>
+      <label for="exampleRadios1">
+        Tiền mặt
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="payment" id="exampleRadios2" value="chuyenkhoan">
+      <label class="form-check-label" for="exampleRadios2">
+        Chuyển khoản
+      </label>
+    </div> <br>
+    <input type="submit" value="Thanh toán ngay" id="thanhtoanngay" class="btn-success-pttt">
+    </form>
+    <p></p>
+  </div>
+
+  <footer class="footer">
+
+
+    <div class="session-three">
+
+      <div id="containerFooter">
+
+        <div id="webFooter">
+          <h3> FASHION KIDS </h3>
+          <p> GIRLS </p>
+          <p> BOYS </p>
+
+        </div>
+        <div id="webFooter">
+          <h3> Liên kết </h3>
+          <p> Trang chủ </p>
+          <p> Về chúng tôi </p>
+          <p> Liên hệ </p>
+        </div>
+        <div id="webFooter">
+          <h3> Hợp Tác </h3>
+          <p> Thanh Tùng </p>
+          <p> Phan Anh </p>
+          <p> Bích Liễu </p>
+          <p> Thanh Long </p>
+
+        </div>
+        <div id="webFooter">
+          <h3> Địa chỉ </h3>
+          <p> 495 Tôn Đức Thắng, Hòa Khánh Bắc, Đà Nẵng</p>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+  <script src="pay.js"></script>
+  <script>
+    // JavaScript code
+    document.getElementById("thanhtoanngay").addEventListener("click", function () {
+      alert("đặt hàng thành công");
+      window.location.href = "product.html";
+    });
+
+  </script>
+</body>
+
+</html>

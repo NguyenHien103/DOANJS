@@ -6,6 +6,7 @@
       "description": "Chân váy kaki Minnie bé gái duyên dáng. Kiểu dáng dễ phối nhiều outfits khác nhau cho bé diện xuống phố, đi học, đi chơi hay đi tiệc. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "Rabity",
       "price": "279,000₫",
+      "amount": "21",
       "id": "1"
     },
     {
@@ -14,14 +15,15 @@
       "description": "áo thun coton mát mẻ cho không khí ngày hè nắng nóng oi bức ",
       "brand": "Minnie",
       "price": "199,000₫",
+      "amount": "23",
       "id": "2"
     },
     {
-      "name": "Đầm váy thun Gấu dâu Lotso ngắn tay bé gái Rabity 550.011",
-      "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
-      "description": "Đầm váy thun Gấu đáng yêu chất liệu thoải mái",
-      "brand": "lotso",
-      "price": "230,000đ",
+      "name": "Đầm thun Gấu dâu Lotso ngắn tay bé gái Rabity 550.011 (Updated)",
+      "preview": "https://example.com/updated-preview-image.jpg",
+      "description": "Đầm váy thun Gấu đáng yêu chất liệu thoải mái (Updated)",
+      "brand": "lotsoy",
+      "price": "250,000đ",
       "id": "3"
     },
     {
@@ -30,6 +32,7 @@
       "description": "Đầm váy là là một outfits không thể thiếu trong tủ đồ của các cô công chúa nhỏ giúp ba mẹ tiết kiệm thời gian trong việc lựa chọn cho bé mỗi ngày mà bé có thể mặc trong nhiều dịp khác nhau như như đi chơi, đi học, đi tiệc,...",
       "brand": "Pony",
       "price": "340,000đ",
+      "amount": "24",
       "id": "4"
     },
     {
@@ -38,6 +41,7 @@
       "description": "Quần short thô bé gái họa tiết chuột Minnie bản quyền Disney kiểu dáng sành điệu, màu sắc trung tính dễ phối đồ đa dạng outfits cho các bé có thể mặc ở nhà, đi học hoặc đi chơi cuối tuần. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "Minnie",
       "price": "145,000đ",
+      "amount": "28",
       "id": "5"
     },
     {
@@ -46,6 +50,7 @@
       "description": "Đầm váy thun sát nách Mickey & Minnie bé gái kiểu dáng đáng yêu, màu sắc đặc biệt, dịu dàng cho các bé có thể mặc đi học, đi tiệc hoặc đi chơi cuối tuần. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "Mickey",
       "price": "199,000đ",
+      "amount": "23",
       "id": "6"
     },
     {
@@ -54,6 +59,7 @@
       "description": "Recycled",
       "brand": "Rabity",
       "price": "340,000đ",
+      "amount": "25",
       "id": "7"
     },
     {
@@ -62,6 +68,7 @@
       "description": "Đầm váy voan ngắn tay được thiết kế kiểu dáng điệu đà, đáng yêu với màu sắc tươi sắc, có lớp vải lưới bên ngoài được đính kim tuyến tạo nên một chiếc đầm vô cùng nổi bật. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "utilisation",
       "price": "469,000đ",
+      "amount": "28",
       "id": "8"
     },
     {
@@ -70,6 +77,7 @@
       "description": "Đầm váy bé gái được may từ chất liệu tự nhiên nên vô cùng thoáng mát, thấm hút mồ hôi vượt trội kết hợp form váy vừa vặn, công chúa nhỏ có thể mặc đi chơi, đi tiệc hay dạo phố xinh xắn. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "enjance",
       "price": "430,000đ",
+      "amount": "28",
       "id": "9"
     },
     {
@@ -78,6 +86,7 @@
       "description": "Quần yếm bé gái nổi bật với họa tiết trái tim và hoa cúc dễ thương",
       "brand": "Hill",
       "price": "240,000đ",
+      "amount": "28",
       "id": "10"
     },
     {
@@ -86,24 +95,26 @@
       "description": "Áo nỉ dài tay bé gái ấm áp cho thời tiết se lạnh, họa tiết cánh bướm kết hợp với phần voan tay bồng điệu đà, đáng yêu cho bé diện thật nổi bật",
       "brand": "Einsteinium",
       "price": "310,000đ",
+      "amount": "28",
       "id": "11"
     },
     {
-      "name": "Áo nỉ dài tay bé gái Minnie Rabity 5781",
-      "preview": "https://product.hstatic.net/1000290074/product/57810000-0_203228ab36cb445883a407a3c32127ad.jpg",
-      "description": "Áo nỉ dài tay bé gái ấm áp cho thời tiết se lạnh, họa tiết Minnie bản quyền Disney cùng 2 màu sắc đáng yêu, ngộ nghĩnh cho bé diện thật nổi bật.",
-      "brand": "redguy",
-      "price": "320,000đ",
-      "id": "12"
+      "id": "SP1",
+      "name": "điện thoại",
+      "brand": "jh",
+      "price": "230.000đ",
+      "amount": "7",
+      "description": "Chi tiết sản phẩm",
+      "preview": ""
     },
     {
-      "name": "Chân váy kaki Minnie bé gái Rabity 555.002",
-      "preview": "https://product.hstatic.net/1000290074/product/555002-0_b984b8a549fc4493b2d8195cf1549d77.jpg",
-      "description": "Chân váy kaki Minnie bé gái duyên dáng. Kiểu dáng dễ phối nhiều outfits khác nhau cho bé diện xuống phố, đi học, đi chơi hay đi tiệc. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
-      "brand": "Rabity",
-      "price": "279,000₫",
-      "amount": "23",
-      "id": "13"
+      "id": "SP1",
+      "name": "",
+      "brand": "",
+      "price": "",
+      "amount": "",
+      "description": "Chi tiết sản phẩm",
+      "preview": ""
     }
   ],
   "boy": [
@@ -154,11 +165,11 @@
     },
     {
       "name": "Áo hoodie nỉ mũ dài tay bé trai Rabity x ELLE Kids - designed in Paris 83011",
-      "preview": "https://product.hstatic.net/1000290074/product/rabity_x_elle02512-min_73350dd40e8243c981a6c7d5b6767fc3.jpg",
-      "description": "Áo hoodie nỉ bé trai chất liệu dày dặn, mang đến phong cách thời thượng, kiểu dáng basic dễ dàng phối đa dạng outfits cho bé tha hồ diện trong nhiều hoạt động, bối cảnh. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "HTI",
       "price": "400,000đ",
-      "amount": "26",
+      "amount": "31",
+      "preview": "https://product.hstatic.net/1000290074/product/rabity_x_elle02512-min_73350dd40e8243c981a6c7d5b6767fc3.jpg",
+      "description": "Áo hoodie nỉ bé trai chất liệu dày dặn, mang đến phong cách thời thượng, kiểu dáng basic dễ dàng phối đa dạng outfits cho bé tha hồ diện trong nhiều hoạt động, bối cảnh. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "id": "22"
     },
     {
@@ -214,27 +225,148 @@
       "price": "172,000đ",
       "amount": "12",
       "id": "28"
+    }
+  ],
+  "transport": [
+    {
+      "name": "ngân",
+      "phone": "0383119980",
+      "address": "Liên Chiểu",
+      "note": "không",
+      "id": "1"
     },
     {
-      "name": "Bộ thun ngắn tay Mickey bé trai Rabity 560.002",
-      "preview": "https://product.hstatic.net/1000290074/product/rabity9309_copy_1d1dd301719e45a88f49b25bdbfcb8c8.jpg",
-      "description": "Bộ đồ bé trai thoải mái mang đi khắp mọi nơi với chất liệu cotton mềm mịn",
-      "brand": "West",
-      "price": "230,000đ",
-      "amount": "28",
-      "id": "29"
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "6"
+    },
+    {
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "5"
+    },
+    {
+      "name": "trung kha",
+      "phone": "078624824",
+      "address": "Chơn Tâm 4",
+      "note": "không",
+      "id": "4"
+    },
+    {
+      "name": "Xuân Nghiêm",
+      "phone": "0827576274",
+      "address": "TP HCM",
+      "note": "nhẹ tay",
+      "id": "5"
+    },
+    {
+      "name": "Xuân chỉnh",
+      "phone": "036732874",
+      "address": "Đại Tráng",
+      "note": "không",
+      "id": "6"
+    },
+    {
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "7"
+    },
+    {
+      "name": "kha",
+      "phone": "0123456",
+      "address": "4 chơn tâm",
+      "note": "trungkha",
+      "id": "8"
+    },
+    {
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "9"
+    },
+    {
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "10"
+    },
+    {
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "11"
+    },
+    {
+      "name": "thanh ngan",
+      "phone": "045247572",
+      "address": "tien ha",
+      "note": "không",
+      "id": "12"
+    },
+    {
+      "name": "em",
+      "phone": "1111",
+      "address": "c6",
+      "note": "kn",
+      "id": "13"
+    },
+    {
+      "name": "",
+      "phone": "",
+      "address": "",
+      "note": "",
+      "id": "14"
+    },
+    {
+      "name": "khavip",
+      "phone": "0868406",
+      "address": "hoa khánh",
+      "note": "vùng 6",
+      "id": "15"
+    },
+    {
+      "name": "Thanh Hằng",
+      "phone": "047674632",
+      "address": "Tiên Phước",
+      "note": "không",
+      "id": "16"
+    },
+    {
+      "name": "cd",
+      "phone": "ẽ",
+      "address": "dcx",
+      "note": "x",
+      "id": "17"
+    },
+    {
+      "name": "hằng",
+      "phone": "0626737611",
+      "address": "Âu Cơ",
+      "note": "he",
+      "id": "18"
     }
   ],
   "user": [
     {
       "username": "long",
       "password": "123456",
-      "sdt": "0974172781"
+      "sdt": "0974172781",
+      "id": "dda4"
     },
     {
       "username": "toan",
       "password": "1234569",
-      "sdt": "0771269821"
+      "sdt": "0771269821",
+      "id": "9e0e"
     }
   ]
 }
