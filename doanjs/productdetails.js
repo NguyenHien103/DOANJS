@@ -10,7 +10,7 @@ fetch("./data.json")
   .then((data) => {
     const girlProduct = data.girl.find((item) => item.id === productId);
     const boyProduct = data.boy.find((item) => item.id === productId);
-
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     if (girlProduct) {
       // Update the DOM with the girl product details
       document.getElementById("product-img").src = girlProduct.preview;
@@ -27,24 +27,23 @@ fetch("./data.json")
       let paraText = document.createTextNode(girlProduct.description);
       para.appendChild(paraText);
       info.appendChild(para);
-      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-      
-      if (isLoggedIn) {
-        let addToCartButton = document.createElement("button");
-          addToCartButton.textContent = "Thêm vào giỏ hàng";
-          addToCartButton.classList.add("add-to-cart");
-          // Add the "Add to Cart" button
-          
-          addToCartButton.addEventListener("click", () => {
-            // Add the product to the cart logic here
-            console.log("Product added to cart:", girlProduct);
-          });
-          info.appendChild(addToCartButton);
-      
-      }else{
-        alert("vui long dang nhap");
-        return;
-      }
+
+      // Add the "Add to Cart" button
+      let addToCartButton = document.createElement("button");
+      addToCartButton.textContent = "Thêm vào giỏ hàng";
+      addToCartButton.classList.add("add-to-cart");
+      addToCartButton.addEventListener("click", () => {
+        if (isLoggedIn) {
+          // Add the product to the cart logic here
+          console.log("Product added to cart:", girlProduct);
+        } else {
+          alert("vui long dang nhap");
+          return;
+        }
+        // Add the product to the cart logic here
+        
+      });
+      info.appendChild(addToCartButton);
     } else if (boyProduct) {
       // Update the DOM with the boy product details
       document.getElementById("product-img").src = boyProduct.preview;
@@ -66,11 +65,18 @@ fetch("./data.json")
       let addToCartButton = document.createElement("button");
       addToCartButton.textContent = "Thêm vào giỏ hàng";
       addToCartButton.classList.add("add-to-cart");
-      addToCartButton.addEventListener("click", () => {
-        // Add the product to the cart logic here
-        console.log("Product added to cart:", boyProduct);
-      });
       info.appendChild(addToCartButton);
+      
+
+      addToCartButton.addEventListener("click", () => {
+        if (isLoggedIn) {
+          // Add the product to the cart logic here
+          console.log("Product added to cart:", boyProduct);
+        } else {
+          alert("vui long dang nhap");
+          return;
+        }
+      });
     } else {
       console.log("Product not found!");
     }
