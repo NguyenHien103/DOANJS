@@ -2,68 +2,206 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+rel="stylesheet"
+/>
 </head>
-<style>
-    h3{
-        font-size: 30px;
-    }
-    form{
-        border: 1px solid black;
-       padding: 50px;
-    }
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10%;
-    }
-    .form_group{
-        padding: 5px;
-    }
-    button{
-        text-align: center;
-        margin-top: 5px;
-        margin-left: 5px;
-        padding: 10px;
-        border: none;
-        background-color: cyan;
-        width: 300px;
-    }
-    input{
-        height: 40px;
-        width: 300px;
-    }
-
-</style>
 <body>
-    <header>
-        <a href="./product.html">Home</a>
-        <a href="./signin.html">Đăng nhập</a>
-        </header>
-    <div class="wrapper">
-        <form id="signup">
-            <h3>Dang ki</h3>
-            <div id="error-message" style="color: red;"></div>
-            <div id="message" style="color: green;"></div>
-            <div class="form_group">
-                <input type="text" placeholder="username" id="username">
-            </div>
-            <div class="form_group">
-                <input type="text" placeholder="password" id="password">
-            </div>
-            <div class="form_group">
-                <input type="text" placeholder="sdt" id="sdt">
-            </div>
-             <button id="signup" >signup</button>
+    <style>
 
-        <a href="./signin.html">quay lai</a>
-        <a id="error-message"></a>
+        body{
+            font-family: Arial, sans-serif;
+          background-color: #ffffff;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        } 
+        #wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vh;
+            
+        }
+      .container-custom{
+        width: 500px;
+      }
+      
+    </style>
+        <div class="container container-custom">
+            <!-- Pills navs -->
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="tab-login" data-mdb-pill-init href="#pills-login" role="tab"
+        aria-controls="pills-login" aria-selected="true">Đăng Nhập</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab-register" data-mdb-pill-init href="#pills-register" role="tab"
+        aria-controls="pills-register" aria-selected="false">Đăng ký</a>
+    </li>
+  </ul>
+  <!-- Pills navs -->
 
-    </form>
-</div>
-<script src="./signup.js"></script>
+  <!-- form đăng nhập -->
+
+  <!-- Pills content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      <form>
+        <div class="text-center mb-3">
+          <p>Đăng nhập bằng:</p>
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+  
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+  
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+  
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+  
+        <p class="text-center">hoặc:</p>
+  
+        <!-- Email input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="email" id="loginName" class="form-control" />
+          <label class="form-label" for="loginName">Email hoặc Tên người dùng</label>
+        </div>
+  
+        <!-- Password input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="password" id="loginPassword" class="form-control" />
+          <label class="form-label" for="loginPassword">Mật khẩu</label>
+        </div>
+  
+        <!-- 2 column grid layout -->
+        <div class="row mb-4">
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-3 mb-md-0">
+              <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+              <label class="form-check-label" for="loginCheck"> Lưu mật khẩu </label>
+            </div>
+          </div>
+  
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- Simple link -->
+            <a href="#!">Quên mật khẩu?</a>
+          </div>
+        </div>
+  
+        <!-- Submit button -->
+        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Đăng nhập</button>
+  
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Không phải thành viên? <a href="#!">Đăng ký</a></p>
+        </div>
+      </form>
+    </div>
+     <!-- kết thúc form đăng nhập -->
+
+    <!-- form đăng ký  -->
+    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+      <form>
+        <div class="text-center mb-3">
+          <p>Đăng ký với:</p>
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+  
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+  
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+  
+          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+  
+        <p class="text-center">hoặc:</p>
+  
+        <!-- Name input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" id="registerName" class="form-control" />
+          <label class="form-label" for="registerName">Họ và tên</label>
+        </div>
+  
+        <!-- Username input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" id="registerUsername" class="form-control" />
+          <label class="form-label" for="registerUsername">Tên đăng nhập</label>
+        </div>
+  
+        <!-- Email input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="email" id="registerEmail" class="form-control" />
+          <label class="form-label" for="registerEmail">Email</label>
+        </div>
+  
+        <!-- Password input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="password" id="registerPassword" class="form-control" />
+          <label class="form-label" for="registerPassword">Mật khẩu</label>
+        </div>
+  
+        <!-- Repeat Password input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="password" id="registerRepeatPassword" class="form-control" />
+          <label class="form-label" for="registerRepeatPassword">Nhập lại mật khẩu</label>
+        </div>
+  
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+            aria-describedby="registerCheckHelpText" />
+          <label class="form-check-label" for="registerCheck">
+            Bạn đồng ý với các điều khoản và điều kiện?
+          </label>
+        </div>
+  
+        <!-- Submit button -->
+        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3">Đăng ký</button>
+      </form>
+    </div>
+
+    <!-- Kết thúc form đăng ký -->
+  </div>
+  <!-- Pills content -->
+        </div>
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
+></script>
 </body>
-
 </html>
