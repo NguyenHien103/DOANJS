@@ -1,6 +1,20 @@
 // Get the product ID from the URL parameter
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
+renderCartBadge();
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const greetingMsg = document.getElementById("greeting-msg");
+
+loginBtn.addEventListener("click", function () {
+  window.location.href = "./login.html";
+});
+
+logoutBtn.addEventListener("click", function () {
+  localStorage.setItem("isLoggedIn", "false");
+  location.reload();
+});
+
 
 // Make a request to get the product details
 fetch("./data.json")
@@ -10,7 +24,7 @@ return response.json();
 .then((data) => {
 const girlProduct = data.girl.find((item) => item.id === productId);
 const boyProduct = data.boy.find((item) => item.id === productId);
-
+const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 if (girlProduct) {
   // Update the DOM with the girl product details
   document.getElementById("product-img").src = girlProduct.preview;
@@ -32,8 +46,15 @@ if (girlProduct) {
   let addToCartButton = document.createElement('button');
   addToCartButton.textContent = "Thêm vào giỏ hàng";
   addToCartButton.classList.add('add-to-cart');
-  addToCartButton.addEventListener('click', () => {
-    addToCart(girlProduct);
+  addToCartButton.addEventListener("click", () => {
+    if (isLoggedIn) {
+      // Add the product to the cart logic here
+      addToCart(girlProduct);
+    } else {
+      alert("vui long dang nhap");
+      return;
+    }
+    // Add the product to the cart logic here
   });
   info.appendChild(addToCartButton);
 } else if (boyProduct) {
@@ -57,8 +78,15 @@ if (girlProduct) {
   let addToCartButton = document.createElement('button');
   addToCartButton.textContent = "Thêm vào giỏ hàng";
   addToCartButton.classList.add('add-to-cart');
-  addToCartButton.addEventListener('click', () => {
-    addToCart(boyProduct);
+  addToCartButton.addEventListener("click", () => {
+    if (isLoggedIn) {
+      // Add the product to the cart logic here
+      addToCart(boyProduct);
+    } else {
+      alert("vui long dang nhap");
+      return;
+    }
+    // Add the product to the cart logic here
   });
   info.appendChild(addToCartButton);
 }
@@ -110,4 +138,19 @@ function renderCartBadge() {
 }
 
 // Initial rendering of the cart badge
-renderCartBadge();
+
+// Cập nhật trạng thái của nút đăng nhập/xuất khi tải trang
+window.addEventListener("load", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const username = sessionStorage.getItem("user");
+
+  if (isLoggedIn && username) {
+   greetingMsg.innerText = isLoggedIn && username ? `Xin chào, ${username}!` : "";
+    logoutBtn.style.display = "block";
+    loginBtn.style.display = "none";
+  } else {
+    logoutBtn.style.display = "none";
+    loginBtn.style.display = "block";
+    sessionStorage.removeItem("user");
+  }
+});

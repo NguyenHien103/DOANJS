@@ -61,4 +61,4 @@ function createResultItem(item) {
   // Hiển thị thêm thông tin sản phẩm tại đây
 
   return resultItem;
-}
+} 

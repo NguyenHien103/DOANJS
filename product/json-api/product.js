@@ -1,3 +1,5 @@
+
+// -----------------------------------
 fetch("./data.json")
 .then((response) => {
     return response.json();
@@ -141,6 +143,34 @@ fetch("./data.json")
    
    
   });
- 
+  const loginBtn = document.getElementById("login-btn");
+  const logoutBtn = document.getElementById("logout-btn");
+  const greetingMsg = document.getElementById("greeting-msg");
+  
+  loginBtn.addEventListener("click", function () {
+    window.location.href = "./login.html";
+  });
+  
+  logoutBtn.addEventListener("click", function () {
+    localStorage.setItem("isLoggedIn", "false");
+    location.reload();
+  });
+  
+  // Cập nhật trạng thái của nút đăng nhập/xuất khi tải trang
+  window.addEventListener("load", function () {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const username = sessionStorage.getItem("user");
+  
+    if (isLoggedIn && username) {
+     greetingMsg.innerText = isLoggedIn && username ? `Xin chào, ${username}!` : "";
+      logoutBtn.style.display = "block";
+      loginBtn.style.display = "none";
+    } else {
+      logoutBtn.style.display = "none";
+      loginBtn.style.display = "block";
+      sessionStorage.removeItem("user");
+    }
+  });
+  
 httpRequest.open("GET", "data.json", true);
-httpRequest.send();
+httpRequest.send();s
