@@ -1,19 +1,7 @@
 // Get the product ID from the URL parameter
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
-renderCartBadge();
-const loginBtn = document.getElementById("login-btn");
-const logoutBtn = document.getElementById("logout-btn");
-const greetingMsg = document.getElementById("greeting-msg");
 
-loginBtn.addEventListener("click", function () {
-  window.location.href = "./login.html";
-});
-
-logoutBtn.addEventListener("click", function () {
-  localStorage.setItem("isLoggedIn", "false");
-  location.reload();
-});
 
 
 // Make a request to get the product details
@@ -138,6 +126,19 @@ function renderCartBadge() {
 }
 
 // Initial rendering of the cart badge
+renderCartBadge();
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const greetingMsg = document.getElementById("greeting-msg");
+
+loginBtn.addEventListener("click", function () {
+  window.location.href = "./login.html";
+});
+
+logoutBtn.addEventListener("click", function () {
+  localStorage.setItem("isLoggedIn", "false");
+  location.reload();
+});
 
 // Cập nhật trạng thái của nút đăng nhập/xuất khi tải trang
 window.addEventListener("load", function () {
