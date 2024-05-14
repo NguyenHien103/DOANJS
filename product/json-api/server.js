@@ -127,7 +127,7 @@ const data = JSON.parse(fs.readFileSync('./data.json'));
 // Tạo một đối tượng mới để thêm vào danh sách "girl"
 const newGirlItem = {
   "name": "Áo len bé gái Rabity 737.005",
-  "preview": "https://example.com/preview-image.jpg",
+  "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
   "description": "Áo len ấm áp và thời trang cho bé gái",
   "brand": "Rabity",
   "price": "300,000₫",
@@ -154,7 +154,7 @@ const updatedData = JSON.parse(fs.readFileSync('./data.json'));
 const itemIdToUpdate = "3";
 const updatedItem = {
   "name": "Đầm thun Gấu dâu Lotso ngắn tay bé gái Rabity 550.011 (Updated)",
-  "preview": "https://example.com/updated-preview-image.jpg",
+  "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
   "description": "Đầm váy thun Gấu đáng yêu chất liệu thoải mái (Updated)",
   "brand": "lotsoy",
   "price": "250,000đ",

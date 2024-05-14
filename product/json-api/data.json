@@ -6,7 +6,6 @@
       "description": "Chân váy kaki Minnie bé gái duyên dáng. Kiểu dáng dễ phối nhiều outfits khác nhau cho bé diện xuống phố, đi học, đi chơi hay đi tiệc. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "Rabity",
       "price": "279,000₫",
-      "amount": "21",
       "id": "1"
     },
     {
@@ -15,12 +14,11 @@
       "description": "áo thun coton mát mẻ cho không khí ngày hè nắng nóng oi bức ",
       "brand": "Minnie",
       "price": "199,000₫",
-      "amount": "23",
       "id": "2"
     },
     {
       "name": "Đầm thun Gấu dâu Lotso ngắn tay bé gái Rabity 550.011 (Updated)",
-      "preview": "https://example.com/updated-preview-image.jpg",
+      "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
       "description": "Đầm váy thun Gấu đáng yêu chất liệu thoải mái (Updated)",
       "brand": "lotsoy",
       "price": "250,000đ",
@@ -32,7 +30,6 @@
       "description": "Đầm váy là là một outfits không thể thiếu trong tủ đồ của các cô công chúa nhỏ giúp ba mẹ tiết kiệm thời gian trong việc lựa chọn cho bé mỗi ngày mà bé có thể mặc trong nhiều dịp khác nhau như như đi chơi, đi học, đi tiệc,...",
       "brand": "Pony",
       "price": "340,000đ",
-      "amount": "24",
       "id": "4"
     },
     {
@@ -41,7 +38,6 @@
       "description": "Quần short thô bé gái họa tiết chuột Minnie bản quyền Disney kiểu dáng sành điệu, màu sắc trung tính dễ phối đồ đa dạng outfits cho các bé có thể mặc ở nhà, đi học hoặc đi chơi cuối tuần. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "Minnie",
       "price": "145,000đ",
-      "amount": "28",
       "id": "5"
     },
     {
@@ -50,7 +46,6 @@
       "description": "Đầm váy thun sát nách Mickey & Minnie bé gái kiểu dáng đáng yêu, màu sắc đặc biệt, dịu dàng cho các bé có thể mặc đi học, đi tiệc hoặc đi chơi cuối tuần. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "Mickey",
       "price": "199,000đ",
-      "amount": "23",
       "id": "6"
     },
     {
@@ -59,7 +54,6 @@
       "description": "Recycled",
       "brand": "Rabity",
       "price": "340,000đ",
-      "amount": "25",
       "id": "7"
     },
     {
@@ -68,7 +62,6 @@
       "description": "Đầm váy voan ngắn tay được thiết kế kiểu dáng điệu đà, đáng yêu với màu sắc tươi sắc, có lớp vải lưới bên ngoài được đính kim tuyến tạo nên một chiếc đầm vô cùng nổi bật. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "utilisation",
       "price": "469,000đ",
-      "amount": "28",
       "id": "8"
     },
     {
@@ -77,7 +70,6 @@
       "description": "Đầm váy bé gái được may từ chất liệu tự nhiên nên vô cùng thoáng mát, thấm hút mồ hôi vượt trội kết hợp form váy vừa vặn, công chúa nhỏ có thể mặc đi chơi, đi tiệc hay dạo phố xinh xắn. Sản phẩm đạt chứng nhận Oeko-Tex 100 an toàn cho da trẻ em.",
       "brand": "enjance",
       "price": "430,000đ",
-      "amount": "28",
       "id": "9"
     },
     {
@@ -86,7 +78,6 @@
       "description": "Quần yếm bé gái nổi bật với họa tiết trái tim và hoa cúc dễ thương",
       "brand": "Hill",
       "price": "240,000đ",
-      "amount": "28",
       "id": "10"
     },
     {
@@ -95,12 +86,19 @@
       "description": "Áo nỉ dài tay bé gái ấm áp cho thời tiết se lạnh, họa tiết cánh bướm kết hợp với phần voan tay bồng điệu đà, đáng yêu cho bé diện thật nổi bật",
       "brand": "Einsteinium",
       "price": "310,000đ",
-      "amount": "28",
       "id": "11"
     },
     {
       "name": "Áo len bé gái Rabity 737.005",
-      "preview": "https://example.com/preview-image.jpg",
+      "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
+      "description": "Áo len ấm áp và thời trang cho bé gái",
+      "brand": "Rabity",
+      "price": "300,000₫",
+      "id": "14"
+    },
+    {
+      "name": "Áo len bé gái Rabity 737.005",
+      "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
       "description": "Áo len ấm áp và thời trang cho bé gái",
       "brand": "Rabity",
       "price": "300,000₫",
@@ -371,6 +369,27 @@
       "address": "Hải Châu",
       "note": "tek",
       "id": "22"
+    },
+    {
+      "name": "Phương Anh",
+      "phone": "0439858i3u55",
+      "address": "Dương Tây",
+      "note": "yu",
+      "id": "23"
+    },
+    {
+      "name": "hen",
+      "phone": "3454586",
+      "address": "thanh mai",
+      "note": "hgf",
+      "id": "24"
+    },
+    {
+      "name": "Thúy",
+      "phone": "029387362627",
+      "address": "Mỹ AN",
+      "note": "f",
+      "id": "25"
     }
   ],
   "user": [
@@ -411,6 +430,14 @@
       "role": "1",
       "order": [],
       "id": "5"
+    },
+    {
+      "username": "van",
+      "password": "vv12345",
+      "sdt": "0966687255",
+      "role": "1",
+      "order": [],
+      "id": "6"
     }
   ]
 }

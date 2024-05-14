@@ -1,71 +1,124 @@
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const greetingMsg = document.getElementById("greeting-msg");
+const badge = document.getElementById("badge");
+loginBtn.addEventListener("click", function () {
+  window.location.href = "./login.html";
+});
+
+logoutBtn.addEventListener("click", function () {
+  localStorage.setItem("isLoggedIn", "false");
+  location.reload();
+});
+
+// Cập nhật trạng thái của nút đăng nhập/xuất khi tải trang
+window.addEventListener("load", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const username = sessionStorage.getItem("user");
+
+  if (isLoggedIn && username) {
+    greetingMsg.innerText =
+      isLoggedIn && username ? `Xin chào, ${username}!` : "";
+    logoutBtn.style.display = "block";
+    loginBtn.style.display = "none";
+  } else {
+    logoutBtn.style.display = "none";
+    loginBtn.style.display = "block";
+    sessionStorage.removeItem("user");
+    cart = [];
+    localStorage.removeItem("cart");
+    window.location.href = "./product.html";
+  }
+});
+
 // Get the cart from localStorage
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Get the table body element to populate the cart items
-const cartItemsBody = document.getElementById("cart-items");
+    // Get the table body element to populate the cart items
+    const cartItemsBody = document.getElementById("cart-items");
 
-//Function to render the cart items
-function renderCartItems() {
-  cartItemsBody.innerHTML = "";
+    function calculateSubtotal(product) {
+return product.price * product.quantity;
+}
 
-  cart.forEach((product, index) => {
-    const row = document.createElement("tr");
-    const productImgCell = document.createElement("td");
-    const productImg = document.createElement("img");
-    productImg.src = product.preview;
-    productImg.alt = product.name;
-    productImgCell.appendChild(productImg);
-    row.appendChild(productImgCell);
 
-    const productNameCell = document.createElement("td");
-    productNameCell.textContent = product.name;
-    row.appendChild(productNameCell);
-
-    const productBrandCell = document.createElement("td");
-    productBrandCell.textContent = product.brand;
-    row.appendChild(productBrandCell);
-
-    const productPriceCell = document.createElement("td");
-    productPriceCell.textContent = product.price;
-    row.appendChild(productPriceCell);
-
-    const quantityCell = document.createElement("td");
-    const quantityWrapper = document.createElement("div");
-    quantityWrapper.classList.add("quantity-wrapper");
-
-    const quantityText = document.createElement("span");
-    quantityText.textContent = product.quantity;
-    quantityWrapper.appendChild(quantityText);
-
-    quantityCell.appendChild(quantityWrapper);
-    row.appendChild(quantityCell);
-
-    cartItemsBody.appendChild(row);
+  // Function to calculate the total price of items in the cart
+function calculateTotalPrice() {
+  let totalPrice = 0;
+  cart.forEach(product => {
+    // Kiểm tra tính hợp lệ của giá và số lượng
+    if (!isNaN(product.price) && !isNaN(product.quantity) && product.price >= 0 && product.quantity >= 0) {
+      // Tính toán thành tiền cho sản phẩm và cộng vào tổng tiền
+      totalPrice += product.price * product.quantity;
+    }
   });
-
-  //Update the cart badge with the total number of products
-  const cartBadge = document.getElementById("badge");
-  // cartBadge.textContent = cart.length.toString();
+  return totalPrice;
 }
 
-// Function to handle the checkout button click
-function handleCheckout() {
-  // Perform the checkout logic here
-  // You can redirect to a payment page orperform any other action
+    function formatNumber(number) {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    // Function to render the cart items
+    function renderCartItems() {
+      cartItemsBody.innerHTML = "";
 
-  // Clear the cart after checkout
-  cart = [];
-  localStorage.removeItem("cart");
-  renderCartItems();
-}
+      let totalPrice = 0; // Biến để tính tổng tiền của toàn bộ giỏ hàng
 
-// Add event listener to the checkout button
-const checkoutButton = document.getElementById("checkout-button");
+      cart.forEach((product, index) => {
+        const row = document.createElement("tr");
+        const productImgCell = document.createElement("td");
+        const productImg = document.createElement("img");
+        productImg.src = product.preview;
+        productImg.alt = product.name;
+        productImgCell.appendChild(productImg);
+        row.appendChild(productImgCell);
 
-// Initial rendering of cart items
-renderCartItems();
+        const productNameCell = document.createElement("td");
+        productNameCell.textContent = product.name;
+        row.appendChild(productNameCell);
 
-// Lấy tham chiếu đến nút button
+        const productBrandCell = document.createElement("td");
+        productBrandCell.textContent = product.brand;
+        row.appendChild(productBrandCell);
+
+        const productPriceCell = document.createElement("td");
+        productPriceCell.textContent = product.price;
+        row.appendChild(productPriceCell);
+
+        const quantityCell = document.createElement("td");
+        const quantityText = document.createElement("span");
+        quantityText.textContent = product.quantity;
+        quantityCell.appendChild(quantityText);
+        row.appendChild(quantityCell);
+
+            // Tính và hiển thị thành tiền cho từng sản phẩm
+
+      const subtotalCell = document.createElement("td");
+      const subtotal = parseFloat(product.price.replace(',', '')) * product.quantity;
+
+
+      // Kiểm tra nếu giá hoặc số lượng không hợp lệ thì hiển thị 0
+      if (isNaN(subtotal)) {
+        subtotalCell.textContent = "0.00";
+      } else {
+        subtotalCell.textContent = formatNumber(subtotal) + "đ"; // Hiển thị thành tiền với 2 chữ số sau dấu phẩy
+      }
+
+      row.appendChild(subtotalCell);
+
+      cartItemsBody.appendChild(row);
+
+      totalPrice += isNaN(subtotal) ? 0 : subtotal; // Cộng vào tổng tiền, nếu subtotal là NaN thì cộng 0
+      //totalPrice += subtotal;
+    });
+
+    // Hiển thị tổng tiền của toàn bộ giỏ hàng
+    const totalPriceElement = document.getElementById("total-price");
+    totalPriceElement.textContent = totalPrice.toFixed(2); // Hiển thị tổng tiền với 2 chữ số sau dấu phẩy
+  }
+    // Initial rendering of cart items
+    renderCartItems();
+    // Lấy tham chiếu đến nút button
 var paymentButton = document.getElementById("paymentButton");
 
 // Thêm sự kiện click
