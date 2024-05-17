@@ -173,17 +173,15 @@ fs.writeFileSync('./data.json', JSON.stringify(updatedData, null, 2));
 
 
 
+
 //npm install cors
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false }));
+
 // Đọc dữ liệu từ tệp JSON
 
 app.get("/api/products/user", (req, res) => {
   const data = JSON.parse(fs.readFileSync("data.json"));
   res.json(data.user);
 });
-
 app.post("/api/products/user", (req, res) => {
   const data = JSON.parse(fs.readFileSync("data.json"));
   const users = req.body;
@@ -193,7 +191,20 @@ app.post("/api/products/user", (req, res) => {
   fs.writeFileSync("data.json", JSON.stringify(data, null, 2)); // Ghi dữ liệu vào tệp JSON
   res.json(users);
 });
+app.get("/api/products/cart", (req, res) => {
+  const data = JSON.parse(fs.readFileSync("data.json"));
+  res.json(data.cart);
+});
 
+app.post("/api/products/cart", (req, res) => {
+  const data = JSON.parse(fs.readFileSync("data.json"));
+  const carts = req.body;
+  carts.id = (data.cart.length + 1).toString();
+  data.cart.push(carts);
+  // Thêm người dùng vào mảng `users`
+  fs.writeFileSync("data.json", JSON.stringify(data, null, 2)); // Ghi dữ liệu vào tệp JSON
+  res.json(carts);
+});
 app.put("/api/products/user", (req, res) => {
   const data = JSON.parse(fs.readFileSync("data.json"));
   const sdt = req.body.sdt;
@@ -213,63 +224,40 @@ app.put("/api/products/user", (req, res) => {
   // Trả về phản hồi thành công
   res.status(200).json({ message: "Mật khẩu đã được cập nhật thành công!" });
 });
-// // Cập nhật dữ liệu trong tệp JSON
-// app.put("/api/products/girl/:id", (req, res) => {
-//   const data = JSON.parse(fs.readFileSync("data.json"));
-//   const productId = req.params.id;
-//   const updatedProduct = req.body;
-//   const index = data.girl.findIndex((product) => product.id === productId);
-//   if (index !== -1) {
-//     data.girl[index] = { ...data.girl[index], ...updatedProduct };
-//     fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
-//     res.json(data.girl[index]);
-//   } else {
-//     res.status(404).json({ error: "Product not found" });
-//   }
-// });
 
-// app.put("/api/products/boy/:id", (req, res) => {
-//   const data = JSON.parse(fs.readFileSync("data.json"));
-//   const productId = req.params.id;
-//   const updatedProduct = req.body;
-//   const index = data.boy.findIndex((product) => product.id === productId);
-//   if (index !== -1) {
-//     data.boy[index] = { ...data.boy[index], ...updatedProduct };
-//     fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
-//     res.json(data.boy[index]);
-//   } else {
-//     res.status(404).json({ error: "Product not found" });
-//   }
-// });
 
-// // Xoá dữ liệu từ tệp JSON
-// app.delete("/api/products/girl/:id", (req, res) => {
-//   const data = JSON.parse(fs.readFileSync("data.json"));
-//   const productId = req.params.id;
-//   const index = data.girl.findIndex((product) => product.id === productId);
-//   if (index !== -1) {
-//     const deletedProduct = data.girl[index];
-//     data.girl.splice(index, 1);
-//     fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
-//     res.json(deletedProduct);
-//   } else {
-//     res.status(404).json({ error: "Product not found" });
-//   }
-// });
+// Endpoint để sửa đổi thông tin của một sản phẩm trong giỏ hàng
+app.put("/api/cart/:id", (req, res) => {
+  const data = JSON.parse(fs.readFileSync("data.json"));
+  const cartItemId = req.params.id;
+  const updatedCartItem = req.body;
+  const index = data.cart.findIndex((item) => item.id === cartItemId);
+  if (index !== -1) {
+    data.cart[index] = { ...data.cart[index], ...updatedCartItem };
+    fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
+    res.json(data.cart[index]);
+  } else {
+    res.status(404).json({ error: "Cart item not found" });
+  }
+});
 
-// app.delete("/api/products/boy/:id", (req, res) => {
-//   const data = JSON.parse(fs.readFileSync("data.json"));
-//   const productId = req.params.id;
-//   const index = data.boy.findIndex((product) => product.id === productId);
-//   if (index !== -1) {
-//     const deletedProduct = data.boy[index];
-//     data.boy.splice(index, 1);
-//     fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
-//     res.json(deletedProduct);
-//   } else {
-//     res.status(404).json({ error: "Product not found" });
-//   }
-// });
+app.delete("/api/cart/:username", (req, res) => {
+  const username = req.params.username;
+  if (!username) {
+    return res.status(400).json({ error: "Username is required" });
+  }
+  const data = JSON.parse(fs.readFileSync("data.json"));
+  const initialLength = data.cart.length;
+  data.cart = data.cart.filter(item => item.username !== username);
+  if (data.cart.length !== initialLength) {
+    fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
+    res.json({ message: `Cart of user ${username} has been deleted successfully` });
+  } else {
+    res.status(404).json({ error: `Cart for user ${username} not found` });
+  }
+});
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

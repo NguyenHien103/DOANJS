@@ -128,7 +128,7 @@ main {
 
 /* CSS cho nút lưu */
 .modal-content #saveChanges {
-    background-color: #F0F1E8; /* Màu trắng xám nhạt */
+    background-color: #D3B1C2; /* Màu trắng xám nhạt */
     color: black;
     padding: 14px 20px;
     margin: 8px 0;
@@ -138,9 +138,18 @@ main {
     width: 100%;
 }
 
-.modal-content #saveChanges:hover {
-    background-color: #D3B1C2; /* Màu hồng nhạt khi di chuột qua */
+/* CSS cho nút thêm */
+.modal-content #saveNewProduct {
+    background-color: #D3B1C2; /* Màu trắng xám nhạt */
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
 }
+
 
 category-options {
     margin-top: 10px;
@@ -148,7 +157,7 @@ category-options {
 
 .category-options button {
     display: block;
-    width: calc(100% - 20px);
+    width: calc(100% - 35px);
     padding: 8px; /* Điều chỉnh kích thước padding để làm cho nút nhỏ hơn */
     margin-bottom: 10px;
     border: none;
@@ -180,8 +189,10 @@ category-options {
     margin-bottom: 10px;
 }
 
-#manage-product {
-    text-decoration: none;
+#manage-categories:hover {
+    background-color: #C49CB6; /* Màu hồng nhạt khi di chuột qua */
+}
+#manage-order{ text-decoration: none;
     color: #333;
     display: block;
     padding: 10px;
@@ -194,8 +205,7 @@ category-options {
     transition: background-color 0.3s;
     margin-bottom: 10px;
 }
-
-#manage-categories:hover {
+#manage-order:hover {
     background-color: #C49CB6; /* Màu hồng nhạt khi di chuột qua */
 }
 
@@ -256,8 +266,8 @@ category-options {
     display: block;
     padding: 10px;
     border-radius: 5px;
-    background-color: #D3B1C2; /* Màu nền */
-    color: #F0F1E8; /* Màu chữ */
+    background-color: #D3B1C2;
+    color: #F0F1E8; 
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -268,5 +278,3 @@ category-options {
 #manage-orders:hover {
     background-color: #C49CB6; /* Màu khi di chuột qua */
 }
-
-

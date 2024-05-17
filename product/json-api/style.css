@@ -54,7 +54,7 @@ header:hover {
  }  */
 .inner-menu ul li {
   display: inline-block;
-  padding: 20px;
+  padding: 16px;
 }
 
 .Logo {
@@ -608,4 +608,10 @@ table tfoot td[colspan="5"] {
 .form-check {
   display: inline-block;
   margin-right: 20px;
+}
+#login-btn{
+  cursor: pointer;
+}
+#logout-btn{
+  cursor: pointer;
 }

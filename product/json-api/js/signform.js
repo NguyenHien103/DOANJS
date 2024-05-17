@@ -45,7 +45,6 @@ const handleSignup = async (e) => {
       password: password,
       sdt: sdt,
       role :"1",
-      order :[]
     };
 
     const options = {

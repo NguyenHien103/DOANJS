@@ -50,7 +50,7 @@ const handlesdt = async (e) => {
               value ="${sdt}"
               readonly
             />
-            <label for="">Số điện thoại</label>
+     
         </div>
       <div class="form-group">
           <input

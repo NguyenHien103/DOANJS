@@ -13,9 +13,9 @@
     <div class="container">
         <aside>
             <nav>
-                <ul> <li><a href="../product.html">Đăng xuất</a></li>
-                    
-                    <li><a id="manage-product" href="index.html">Quản lý sản phẩm</a></li>
+                <ul>
+                    <li><a href="../product.html">Đăng xuất</a></li>
+                    <li><a id="manage-order" href="index.html">Quản lý sản phẩm</a></li>
                     <li><a id="manage-orders" href="#">Quản lý đơn hàng</a></li>
                     <li><a id="manage-categories" href="#">Quản lý danh mục sản phẩm</a>
                         <input type="hidden" id="productCategory" value="">
@@ -24,9 +24,7 @@
                             <a href="#" id="girl-option">Girl</a>
                         </div>
                     </li>
-                   
                 </ul>
-               
             </nav>
         </aside>
         <main id="product-table">
@@ -39,6 +37,7 @@
             </table>
         </main>
     </div>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -51,6 +50,22 @@
                 <input type="text" id="productPrice" name="productPrice" placeholder="Giá"><br>
                 <!-- Thêm các trường khác như hình ảnh, hãng, giá, v.v. -->
                 <button type="button" id="saveChanges">Lưu thay đổi</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Thêm sản phẩm mới</h2>
+            <form id="addProductForm">
+                <input type="text" id="newProductName" name="newProductName" placeholder="Tên sản phẩm"><br>
+                <input type="text" id="newProductPreview" name="newProductPreview" placeholder="Đường link hình ảnh"><br>
+                <input type="text" id="newProductDescription" name="newProductDescription" placeholder="Mô tả sản phẩm">
+                <input type="text" id="newProductBrand" name="newProductBrand" placeholder="Hãng"><br>
+                <input type="text" id="newProductPrice" name="newProductPrice" placeholder="Giá"><br>
+                <!-- Thêm các trường khác như hình ảnh, hãng, giá, v.v. -->
+                <button type="button" id="saveNewProduct">Thêm</button>
             </form>
         </div>
     </div>

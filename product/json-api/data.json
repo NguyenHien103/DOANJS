@@ -94,15 +94,7 @@
       "description": "Áo len ấm áp và thời trang cho bé gái",
       "brand": "Rabity",
       "price": "300,000₫",
-      "id": "14"
-    },
-    {
-      "name": "Áo len bé gái Rabity 737.005",
-      "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
-      "description": "Áo len ấm áp và thời trang cho bé gái",
-      "brand": "Rabity",
-      "price": "300,000₫",
-      "id": "14"
+      "id": "12"
     }
   ],
   "boy": [
@@ -294,102 +286,18 @@
       "id": "11"
     },
     {
-      "name": "thanh ngan",
-      "phone": "045247572",
-      "address": "tien ha",
-      "note": "không",
+      "name": "jdf",
+      "phone": "0304303200",
+      "address": "ths",
+      "note": "jf",
       "id": "12"
     },
     {
-      "name": "em",
-      "phone": "1111",
-      "address": "c6",
-      "note": "kn",
+      "name": "h",
+      "phone": "0e3",
+      "address": "e",
+      "note": "3",
       "id": "13"
-    },
-    {
-      "name": "",
-      "phone": "",
-      "address": "",
-      "note": "",
-      "id": "14"
-    },
-    {
-      "name": "khavip",
-      "phone": "0868406",
-      "address": "hoa khánh",
-      "note": "vùng 6",
-      "id": "15"
-    },
-    {
-      "name": "Thanh Hằng",
-      "phone": "047674632",
-      "address": "Tiên Phước",
-      "note": "không",
-      "id": "16"
-    },
-    {
-      "name": "cd",
-      "phone": "ẽ",
-      "address": "dcx",
-      "note": "x",
-      "id": "17"
-    },
-    {
-      "name": "hằng",
-      "phone": "0626737611",
-      "address": "Âu Cơ",
-      "note": "he",
-      "id": "18"
-    },
-    {
-      "name": "Tùng",
-      "phone": "00302383828",
-      "address": "Hòa Minh",
-      "note": "hello",
-      "id": "19"
-    },
-    {
-      "name": "Thanh",
-      "phone": "0294736632",
-      "address": "Huế",
-      "note": "ht",
-      "id": "20"
-    },
-    {
-      "name": "Thúy",
-      "phone": "00300223",
-      "address": "fdf",
-      "note": "",
-      "id": "21"
-    },
-    {
-      "name": "Nga",
-      "phone": "003288129",
-      "address": "Hải Châu",
-      "note": "tek",
-      "id": "22"
-    },
-    {
-      "name": "Phương Anh",
-      "phone": "0439858i3u55",
-      "address": "Dương Tây",
-      "note": "yu",
-      "id": "23"
-    },
-    {
-      "name": "hen",
-      "phone": "3454586",
-      "address": "thanh mai",
-      "note": "hgf",
-      "id": "24"
-    },
-    {
-      "name": "Thúy",
-      "phone": "029387362627",
-      "address": "Mỹ AN",
-      "note": "f",
-      "id": "25"
     }
   ],
   "user": [
@@ -402,42 +310,119 @@
     },
     {
       "username": "tung",
-      "password": "t123",
+      "password": "z123",
       "sdt": "1231231231",
       "role": "1",
       "id": "2"
     },
     {
-      "username": "long",
-      "password": "t123",
-      "sdt": "1231231235",
+      "username": "kanh",
+      "password": "a123",
+      "sdt": "1231231234",
       "role": "1",
-      "order": [],
-      "id": "3"
+      "id": "4"
+    },
+    {
+      "username": "tlinh",
+      "password": "z123",
+      "sdt": "1231231237",
+      "role": "1",
+      "id": "5"
     },
     {
       "username": "hien",
       "password": "h12345",
-      "sdt": "0326239537",
-      "role": "1",
-      "order": [],
-      "id": "4"
-    },
-    {
-      "username": "Blieu",
-      "password": "l12345",
       "sdt": "0326235537",
       "role": "1",
-      "order": [],
       "id": "5"
     },
     {
-      "username": "van",
-      "password": "vv12345",
-      "sdt": "0966687255",
+      "username": "tung14",
+      "password": "tung111",
+      "sdt": "0814671715",
       "role": "1",
-      "order": [],
       "id": "6"
+    },
+    {
+      "username": "ha",
+      "password": "ha1234",
+      "sdt": "0333755184",
+      "role": "1",
+      "id": "7"
+    }
+  ],
+  "cart": [
+    {
+      "username": "tung",
+      "products": "Chân váy kaki Minnie bé gái Rabity 555.002",
+      "brand": "Rabity",
+      "price": "278,000đ",
+      "quantity": 1,
+      "id": "1"
+    },
+    {
+      "username": "tung",
+      "products": "Đầm váy thun sát nách Mickey & Minnie bé gái Rabity 552.001",
+      "brand": "Mickey",
+      "price": "199,000đ",
+      "quantity": 1,
+      "id": "2"
+    },
+    {
+      "username": "tung",
+      "products": "Đầm váy thun sát nách Mickey & Minnie bé gái Rabity 552.001",
+      "brand": "Mickey",
+      "price": "199,000đ",
+      "quantity": 1,
+      "id": "3"
+    },
+    {
+      "username": "tung",
+      "products": "Bộ thun ngắn tay Mickey bé trai Rabity 560.002",
+      "brand": "West",
+      "price": "230,000đ",
+      "quantity": 1,
+      "id": "4"
+    },
+    {
+      "username": "tung",
+      "products": "Đầm váy thun sát nách Mickey & Minnie bé gái Rabity 552.001",
+      "brand": "Mickey",
+      "price": "199,000đ",
+      "quantity": 1,
+      "id": "5"
+    },
+    {
+      "username": "tung",
+      "products": "Bộ thun ngắn tay Mickey bé trai Rabity 560.002",
+      "brand": "West",
+      "price": "230,000đ",
+      "quantity": 1,
+      "id": "6"
+    },
+    {
+      "username": "hien",
+      "products": "Áo thun ngắn tay Minnie bé gái Rabity 500.009",
+      "brand": "Minnie",
+      "price": "199,000₫",
+      "quantity": 1,
+      "id": "7"
+    },
+    {
+      "username": "hien",
+      "products": "Áo thun ngắn tay Minnie bé gái Rabity 500.009",
+      "brand": "Minnie",
+      "price": "199,000₫",
+      "quantity": 1,
+      "id": "8"
+    },
+    {
+      "username": "hien",
+      "products": "Áo thun ngắn tay Minnie bé gái Rabity 500.009",
+      "brand": "Minnie",
+      "price": "199,000₫",
+      "quantity": 1,
+      "id": "9"
     }
   ]
 }
