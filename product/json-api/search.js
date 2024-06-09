@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         const boysearchResults = data.boy.filter((item) => {
-          return item.name.toLowerCase().includes(searchKeyword);
+          return item.name.toLowerCase().includes(searchKeyword.toLowerCase());
         });
 
         const girlsearchResults = data.girl.filter((item) => {
-          return item.name.toLowerCase().includes(searchKeyword);
+          return item.name.toLowerCase().includes(searchKeyword.toLowerCase());
         });
 
         const searchResultsContainer = document.getElementById("searchResults");
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function createResultItem(item) {
   const resultItem = document.createElement("div");
+  resultItem.classList.add("result-item");
 
   const imgTag = document.createElement("img");
   imgTag.src = item.preview;
@@ -58,7 +59,40 @@ function createResultItem(item) {
   price.textContent = item.price;
   resultItem.appendChild(price);
 
-  // Hiển thị thêm thông tin sản phẩm tại đây
+  const addToCartButton = document.createElement("button");
+  addToCartButton.textContent = "Thêm vào giỏ hàng";
+  addToCartButton.classList.add("add-to-cart");
+  addToCartButton.addEventListener("click", () => {
+    addToCart(item);
+  });
+
+  resultItem.appendChild(addToCartButton);
 
   return resultItem;
-} 
+}
+
+// Function to render the cart badge
+function renderCartBadge() {
+  const cartBadge = document.getElementById("badge");
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartBadge.textContent = cart.reduce((total, item) => total + item.quantity, 0).toString();
+}
+
+// Function to add a product to the cart
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existingProduct = cart.find((p) => p.id === product.id);
+  if (existingProduct) {
+    existingProduct.quantity++;
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCartBadge();
+}
+
+// Initial render of the cart badge on page load
+renderCartBadge();

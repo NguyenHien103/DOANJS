@@ -1,49 +1,22 @@
-#searchResults {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #searchResults img {
-    max-width: 100%;
-    max-height: 300px;
-    margin-bottom: 10px;
-  }
-  .searchContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 2px solid #45474a;
-    padding: 10px;
-    background: aliceblue;
+
+.grid-container {
+ 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 cột */
+  grid-gap: 20px; /* Khoảng cách giữa các cột */
 }
-  
-  h1 {
-    text-align: center;
-  }
-/* 
-  .searchContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 2px solid #ccc;
-    padding: 10px;
-  }
-  
-  #searchResults {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #searchResults img {
-    flex: 1 0 25%;
-    max-width: 100%;
-    max-height: 300px;
-    margin: 5px;
-  } */
+
+.result-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.result-item img {
+  max-width: 100%;
+}
+
+.result-item img {
+  max-width: 100%;
+  max-height: 100px; /* Thay đổi kích thước chiều cao tùy ý */
+  object-fit: contain; /* Đảm bảo hình ảnh không bị biến dạng */
+}

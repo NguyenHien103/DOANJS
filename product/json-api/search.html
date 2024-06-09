@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Kết quả tìm kiếm</title>
-  <link rel="stylesheet" href="search.css">
-</head>
-<body>
-  <h1>Kết quả tìm kiếm</h1>
 
-  <div id="searchResults"></div>
+<head>
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="./productdetail.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* CSS styles for product detail page */
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header-main">
+            <div class="container">
+                <div class="inner-wrap">
+                    <div class="inner-logo">
+                        <a href="product.html">
+                            <img src="uploads/logo1.png" ; width="80px" alt="">
+                        </a>
+                        <!-- <span>FASHION KIDS</span> -->
+
+                    </div>
+                    <div class="inner-menu">
+                        <ul>
+                            <li>
+                                <a class="home" href="product.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#">Product</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">contact</a>
+                            </li>
+                            <li>
+                                <a  id="login-btn" style="display: block;">đăng nhập</a>   
+                                <a  id="logout-btn" style="display: none;">đăng xuất</a>
+                                
+                            </li>
+                            <li>
+                                <a  id="greeting-msg" ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="user">
+                        <a href="cart.html">
+                            <i id="cart-icon" class="fas fa-shopping-cart addedToCart">
+                                <div id="badge" class="cart-badge"></div>
+                            </i>
+                        </a>
+                    </div>
+                    <div class="inner-social">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/Hiencute1910/" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header -->
+
+  <h1 style="margin-top: 200px;">Kết quả tìm kiếm</h1>
+
+  <div id="searchResults">
+   
+  </div>
 
   <script src="search.js">
     
