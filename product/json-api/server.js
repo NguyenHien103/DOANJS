@@ -124,15 +124,15 @@ app.delete("/api/products/boy/:id", (req, res) => {
 // Đọc dữ liệu từ tệp JSON
 const data = JSON.parse(fs.readFileSync('./data.json'));
 
-// Tạo một đối tượng mới để thêm vào danh sách "girl"
-const newGirlItem = {
-  "name": "Áo len bé gái Rabity 737.005",
-  "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
-  "description": "Áo len ấm áp và thời trang cho bé gái",
-  "brand": "Rabity",
-  "price": "300,000₫",
-  "id": "14"
-};
+// // Tạo một đối tượng mới để thêm vào danh sách "girl"
+// const newGirlItem = {
+//   "name": "Áo len bé gái Rabity 737.005",
+//   "preview": "https://product.hstatic.net/1000290074/product/rabity8704_copy_e32aea0f3c3f4ca381c53d92a837595e.jpg",
+//   "description": "Áo len ấm áp và thời trang cho bé gái",
+//   "brand": "Rabity",
+//   "price": "300,000₫",
+//   "id": "14"
+// };
 
 // Thêm đối tượng mới vào danh sách "girl"
 data.girl.push(newGirlItem);

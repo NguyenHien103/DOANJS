@@ -172,5 +172,12 @@ fetch("./data.json")
     }
   });
   
+  // Get the cart from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Update the cart badge with the total number of products
+const cartBadge = document.getElementById("badge");
+cartBadge.textContent = cart.length.toString();
+  
 httpRequest.open("GET", "data.json", true);
 httpRequest.send();s

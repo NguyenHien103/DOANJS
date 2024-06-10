@@ -124,7 +124,7 @@ var paymentButton = document.getElementById("paymentButton");
 // Thêm sự kiện click
 paymentButton.addEventListener("click", function () {
   // Chuyển hướng đến trang thanh toán
-  window.location.href = "pay.html";
+  window.location.href = "./pay.html";
 });
 
 // Function to handle form submission
